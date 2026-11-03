@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin"><title>yt</title>
+<style>html,body{margin:0;height:100%;background:#000}iframe{border:0;width:100%;height:100%}</style></head>
+<body><iframe id="f" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+<script>
+function go(){var id=(location.hash||"").slice(1).replace(/[^\w-]/g,"");
+ document.getElementById("f").src=id?"https://www.youtube.com/embed/"+id+"?autoplay=1&playsinline=1&rel=0&modestbranding=1&origin="+encodeURIComponent(location.origin):"about:blank";}
+window.onhashchange=go;go();
+</script></body></html>
